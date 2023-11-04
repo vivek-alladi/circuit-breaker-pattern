@@ -41,14 +41,14 @@ public class ProductService {
         return productResponses;
     }
 
-    public String validateProductId(String id) throws IOException {
+    public Boolean validateProductId(String id) throws IOException {
         List<Product> productList = getProductList();
 
         for(Product product: productList) {
             if(product.getId().equals(id)) {
-                return "product is valid";
+                return true;
             }
         }
-        return "product is invalid";
+        return false;
     }
 }

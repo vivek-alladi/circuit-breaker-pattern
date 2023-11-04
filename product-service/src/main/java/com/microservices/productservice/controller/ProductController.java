@@ -27,7 +27,7 @@ public class ProductController {
     }
 
     @GetMapping("/validate/{id}")
-    public ResponseEntity<String> validateProductId(@PathVariable String id) throws IOException {
+    public ResponseEntity<Boolean> validateProductId(@PathVariable String id) throws IOException {
         return ResponseEntity.ok(productService.validateProductId(id));
     }
 
