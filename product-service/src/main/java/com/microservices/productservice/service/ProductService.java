@@ -40,4 +40,15 @@ public class ProductService {
 
         return productResponses;
     }
+
+    public String validateProductId(String id) throws IOException {
+        List<Product> productList = getProductList();
+
+        for(Product product: productList) {
+            if(product.getId().equals(id)) {
+                return "product is valid";
+            }
+        }
+        return "product is invalid";
+    }
 }
