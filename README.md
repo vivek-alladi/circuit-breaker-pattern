@@ -20,7 +20,6 @@ such that requests queueing up at the caller service (A) for other parts of the 
 - This is checked for a certain period of time called threshold, if fails to B cross the threshold, then break the circuit and stop calls to B. 
 - For more info visit: https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
 
-States
  <img width="797" alt="image" src="https://github.com/vivek-alladi/circuit-breaker-pattern/assets/38089262/c9ea0b1d-dfe9-4e26-9574-b9cfcae6e7ad">
 
 Main uses:
