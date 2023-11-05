@@ -19,3 +19,13 @@ such that requests queueing up at the caller service (A) for other parts of the 
 - This is where circuit breaker pattern can be used, it simply means break the ciruit to B, if it is observed that a series of calls to it are failing leading to massive response times. 
 - This is checked for a certain period of time called threshold, if fails to B cross the threshold, then break the circuit and stop calls to B. 
 - For more info visit: https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
+
+ <img width="600" alt="image" src="https://github.com/vivek-alladi/circuit-breaker-pattern/assets/38089262/c9ea0b1d-dfe9-4e26-9574-b9cfcae6e7ad">
+
+Main uses:
+- Allows remote service to recover
+- Fails fast to protect resources from exhaustion
+
+Applicability:
+- Building a fault-tolerant application where failure of some services shouldn't bring the entire application down.
+
