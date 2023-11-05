@@ -7,6 +7,9 @@ public class InventoryResponse {
         this.count = count;
     }
 
+    public InventoryResponse() {
+    }
+
     public String getCount() {
         return count;
     }

@@ -1,5 +1,6 @@
 package com.microservices.orderservice.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.microservices.orderservice.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +14,7 @@ public class OrderController {
     private OrderService orderService;
 
     @PostMapping("/place/{id}")
-    public ResponseEntity<String> placeOrder(@PathVariable String id) {
+    public ResponseEntity<String> placeOrder(@PathVariable String id) throws JsonProcessingException {
         return ResponseEntity.ok(orderService.placeOrder(id));
     }
 }
